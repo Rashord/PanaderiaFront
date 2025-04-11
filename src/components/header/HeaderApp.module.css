@@ -1,0 +1,10 @@
+.headerApp{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 5px;
+    background-color: #ea9828;
+}
+.logo{
+    width: 40px;
+}
