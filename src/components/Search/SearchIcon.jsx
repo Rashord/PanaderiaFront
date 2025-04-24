@@ -12,7 +12,7 @@ const SearchIcon = () => {
         width='30px'
         height='30px'
         color='#000'
-        style={{marginInline:'10px'}}
+        style={{marginLeft:'15px'}}
         >
         <path 
             strokeLinecap="round" 
