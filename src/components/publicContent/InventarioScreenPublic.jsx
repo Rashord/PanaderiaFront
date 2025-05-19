@@ -24,11 +24,11 @@ const rows = [
 
 const InventarioScreenPublic = () => {
   const [filterValue, setFilterValue] = useState('')
+  const hasSearchFilter = Boolean(filterValue)
   const getValue = (value) =>{
     setFilterValue(value)
   }
 
-  const hasSearchFilter = Boolean(filterValue)
   const filteredList = useMemo(()=>{
     let filteredData = [...rows]
     
@@ -38,7 +38,7 @@ const InventarioScreenPublic = () => {
       )
     }
     return filteredData
-  }, [filterValue])
+  }, [hasSearchFilter, filterValue])
 
   return (
     <div>

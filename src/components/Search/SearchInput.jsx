@@ -19,7 +19,7 @@ const SearchInput = ( {getValue}) => {
     <div className={`${classes.headerMov}`}>
       
       <div className={`${classes.avatar}`}>
-        <img className={`${classes.logo}`} src='logoS.webp'/>
+        <img className={`${classes.logo}`} src='logo.webp' alt='logo panaderia RyM'/>
       </div>
 
         

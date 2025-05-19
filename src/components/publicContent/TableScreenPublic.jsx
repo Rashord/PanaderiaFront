@@ -2,7 +2,7 @@ import { styled, Table, TableBody, TableCell, tableCellClasses, TableContainer, 
 import React from 'react'
 
 
-const StyleTableCell = styled(TableCell)(({ theme }) => ({
+const StyleTableCell = styled(TableCell)(() => ({
     [`&.${tableCellClasses.head}`]: {
         border: 'transparent',
         overflow: 'hidden',
@@ -45,7 +45,7 @@ const TableScreenPublic = ( {column, rows} ) => {
                 </TableRow>
             </TableHead>
             <TableBody>
-                {rows.map((row,index)=>(
+                {rows.map((row)=>(
                     <StyledTableRow key={row.id} sx={{marginTop:'20px'}}>
                         {column.map((col)=>(
                             <StyleTableCell>{row[col.nameColumn]}</StyleTableCell>
