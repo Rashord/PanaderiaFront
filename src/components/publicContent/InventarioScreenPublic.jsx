@@ -1,13 +1,15 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import TableScreenPublic from './TableScreenPublic'
 import SearchInput from '../Search/SearchInput'
 import CircleCrossIcon from '../Search/CircleCrossIcon'
 
+const ENDPOINT_DATA=`http://localhost:3000/api/getAllProducto`
+
+
 const column = [
-  {id:1, nameColumn: 'lastName'},
-  {id:2, nameColumn: 'firstName'},
-  {id:3, nameColumn: 'age'},
-  {id:4, nameColumn: 'agemon'}
+  {id: 1 ,nameColumn:'nombreProducto', label: 'Nombre'},
+  {id: 2, nameColumn: 'precioVentaReal', label: 'Precio'},
+  {id: 3, nameColumn: 'precioVentaReal', label: 'Estado'}
 ]
 
 const rows = [
@@ -22,7 +24,7 @@ const rows = [
   { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65, agemon:'lolol' },
 ];
 
-const InventarioScreenPublic = () => {
+const InventarioScreenPublic = ( {products} ) => {
   const [filterValue, setFilterValue] = useState('')
   const hasSearchFilter = Boolean(filterValue)
   const getValue = (value) =>{
@@ -30,16 +32,16 @@ const InventarioScreenPublic = () => {
   }
 
   const filteredList = useMemo(()=>{
-    let filteredData = [...rows]
-    
+    let filteredData = [...products]
+    console.log(products)
     if(hasSearchFilter){
-      filteredData = filteredData.filter((row)=>
-        row.lastName.toLowerCase().includes(filterValue.toLowerCase())
+      filteredData = filteredData.filter((products )=>
+        products.nombreProducto.toLowerCase().includes(filterValue.toLowerCase())
       )
     }
     return filteredData
-  }, [hasSearchFilter, filterValue])
-
+  }, [products,hasSearchFilter, filterValue])
+  
   return (
     <div>
       <SearchInput getValue={getValue}/>

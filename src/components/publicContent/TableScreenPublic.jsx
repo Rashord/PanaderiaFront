@@ -39,7 +39,7 @@ const TableScreenPublic = ( {column, rows} ) => {
                 <TableRow>
                     {column.map((col)=>(
                         <StyleTableCell key={col.id} align={col.align}>
-                            {col.nameColumn}
+                            {col.label}
                         </StyleTableCell>
                     ))}
                 </TableRow>
@@ -48,7 +48,7 @@ const TableScreenPublic = ( {column, rows} ) => {
                 {rows.map((row)=>(
                     <StyledTableRow key={row.id} sx={{marginTop:'20px'}}>
                         {column.map((col)=>(
-                            <StyleTableCell>{row[col.nameColumn]}</StyleTableCell>
+                            <StyleTableCell>$ {row[col.nameColumn]}</StyleTableCell>
                         ))}
                     </StyledTableRow>
                 ))}
@@ -57,6 +57,4 @@ const TableScreenPublic = ( {column, rows} ) => {
 
   )
 }
-
-
 export default TableScreenPublic
