@@ -1,4 +1,5 @@
 import HeaderApp from './components/header/HeaderApp'
+import { CustomDataTable } from './components/privateContent/CustomDataTable'
 import InventarioScreenPublic from './components/publicContent/InventarioScreenPublic'
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
   return (
     <div> 
       <HeaderApp/>
-      <InventarioScreenPublic/>
+      <CustomDataTable/>
     </div>
   )
 }
