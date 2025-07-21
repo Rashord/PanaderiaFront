@@ -54,6 +54,7 @@
         align-items: center;
         padding-block: 5px;
         padding-left: 10px;
+        width: 100%;
         background-color: #ea9828;
     }
     .logo{

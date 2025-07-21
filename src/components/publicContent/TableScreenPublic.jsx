@@ -33,28 +33,26 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 const TableScreenPublic = ( {column, rows} ) => {
   return (
-   
-        <Table className='tablePublic' aria-label='Inventario' sx={{padding:'5px', borderCollapse: 'separate', borderSpacing:'0 7px' }}>
-            <TableHead>
-                <TableRow>
-                    {column.map((col)=>(
-                        <StyleTableCell key={col.id} align={col.align}>
-                            {col.label}
-                        </StyleTableCell>
-                    ))}
-                </TableRow>
-            </TableHead>
-            <TableBody>
-                {rows.map((row)=>(
-                    <StyledTableRow key={row.id} sx={{marginTop:'20px'}}>
-                        {column.map((col)=>(
-                            <StyleTableCell>$ {row[col.nameColumn]}</StyleTableCell>
-                        ))}
-                    </StyledTableRow>
-                ))}
-            </TableBody>
-        </Table>
-
+    <Table className='tablePublic' aria-label='Inventario' sx={{padding:'5px', borderCollapse: 'separate', borderSpacing:'0 7px' }}>
+      <TableHead>
+        <TableRow>
+          {column.map((col)=>(
+            <StyleTableCell key={col.id} align={col.align}>
+                {col.label}
+            </StyleTableCell>
+          ))}
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {rows.map((row)=>(
+          <StyledTableRow key={row.id} sx={{marginTop:'20px'}}>
+            {column.map((col)=>(
+                <StyleTableCell>$ {row[col.nameColumn]}</StyleTableCell>
+            ))}
+          </StyledTableRow>
+        ))}
+      </TableBody>
+    </Table>
   )
 }
 export default TableScreenPublic

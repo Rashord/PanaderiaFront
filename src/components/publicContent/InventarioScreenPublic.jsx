@@ -1,10 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import TableScreenPublic from './TableScreenPublic'
 import SearchInput from '../Search/SearchInput'
-import CircleCrossIcon from '../Search/CircleCrossIcon'
-
-const ENDPOINT_DATA=`http://localhost:3000/api/getAllProducto`
-
+import { NewProducto } from './NewProducto';
 
 const column = [
   {id: 1 ,nameColumn:'nombreProducto', label: 'Nombre'},
@@ -44,7 +41,10 @@ const InventarioScreenPublic = ( {products} ) => {
   
   return (
     <div>
-      <SearchInput getValue={getValue}/>
+      <div style={{display:'flex', width:'100%' , flexDirection:'column', alignItems:'center' }}>
+        <SearchInput getValue={getValue}/>
+        <NewProducto/>
+      </div>
       <TableScreenPublic column={column} rows={filteredList}/>
     </div>
   )

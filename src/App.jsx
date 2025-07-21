@@ -2,7 +2,7 @@ import HeaderApp from './components/header/HeaderApp'
 import InventarioScreenPublic from './components/publicContent/InventarioScreenPublic'
 import React from 'react'
 
-const ENDPOINT_DATA=`http://192.168.1.20:3000/api/getAllProducto`
+const ENDPOINT_DATA=`http://192.168.1.20:3000/api/allProducto`
 
 
 function App() {
@@ -14,7 +14,8 @@ function App() {
     },[])
   return (
     <div> 
-      <h1 style={{color:'black'}}>Holita</h1>
+
+      <InventarioScreenPublic products={products} />
     </div>
   )
 }
