@@ -1,0 +1,9 @@
+.customButtom{
+    background-color: #2a70c5;
+    color: white;
+    width: 96%;
+    padding-block: 10px;
+    margin-top: 8px;
+    border-radius: 10px;
+    border-color: transparent;
+}

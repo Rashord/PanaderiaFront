@@ -36,24 +36,23 @@ const TableScreenPublic = ( {column, rows} ) => {
       <TableHead>
         <TableRow>
           {column.map((col)=>(
-              <StyleTableCell key={col.id} align={col.align}>
-                  {col.nameColumn}
-              </StyleTableCell>
+            <StyleTableCell key={col.id} align={col.align}>
+                {col.label}
+            </StyleTableCell>
           ))}
         </TableRow>
       </TableHead>
       <TableBody>
         {rows.map((row)=>(
           <StyledTableRow key={row.id} sx={{marginTop:'20px'}}>
-              {column.map((col)=>(
-                  <StyleTableCell>{row[col.nameColumn]}</StyleTableCell>
-              ))}
+            {column.map((col)=>(
+                <StyleTableCell>$ {row[col.nameColumn]}</StyleTableCell>
+            ))}
+
           </StyledTableRow>
         ))}
       </TableBody>
     </Table>
   )
 }
-
-
 export default TableScreenPublic
