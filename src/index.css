@@ -15,7 +15,6 @@ body {
   margin: 0;
   width: 100%;
 }
-
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -61,4 +60,28 @@ body {
   border-radius: 6px;
   border: none;
   cursor: pointer;
+}
+=======
+input {
+  height: 2rem;
+  border-width: 0px;
+  width: 90%;
+  padding-block: 20px ;
+  padding-left: 15px;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+input:focus {
+  outline: none;
+  border-color: transparent;
+}
+.searchContainer{
+    display: flex;
+    flex-direction:row; 
+    align-items: center;
+    justify-content: center;
+    padding-block: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #eceae5;
 }

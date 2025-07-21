@@ -1,6 +1,5 @@
-import { styled, Table, TableBody, TableCell, tableCellClasses, TableContainer, TableHead, TableRow } from '@mui/material';
-import React from 'react'
-
+import { styled, Table, TableBody, TableCell, 
+  tableCellClasses, TableHead, TableRow } from '@mui/material';
 
 const StyleTableCell = styled(TableCell)(() => ({
     [`&.${tableCellClasses.head}`]: {
@@ -49,6 +48,7 @@ const TableScreenPublic = ( {column, rows} ) => {
             {column.map((col)=>(
                 <StyleTableCell>$ {row[col.nameColumn]}</StyleTableCell>
             ))}
+
           </StyledTableRow>
         ))}
       </TableBody>
