@@ -4,9 +4,11 @@ export function CustomInput ( {tipo,  holder} ) {
     return(
         <div className='searchContainer'>
             <input
+                id={holder}
                 type={tipo}
-                placeholder={holder}
+                placeholder={' '}
             />
+            <label for= {holder}>{ holder }</label>
         </div>
     )
 }

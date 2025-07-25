@@ -29,12 +29,33 @@ input:focus {
   border-color: transparent;
 }
 .searchContainer{
-    display: flex;
-    flex-direction:row; 
-    align-items: center;
-    justify-content: center;
-    padding-block: 5px;
+  position: relative;
+  margin: 20px 0;
+}
+.searchContainer input{
+    padding: 20px 8px;
     width: 100%;
-    border-radius: 30px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
     background-color: #eceae5;
+    outline: none;
+}
+.searchContainer label{
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  color: #999;
+  background: transparent;
+  padding: 0 4px;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.searchContainer input:focus + label,
+.searchContainer input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 6px;
+  font-size: 12px;
+  color: #722FF5;
 }
