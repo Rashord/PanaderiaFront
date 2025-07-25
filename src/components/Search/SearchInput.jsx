@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import classes from './Search.module.css'
 import SearchIcon from './SearchIcon'
 import CircleCrossIcon from './CircleCrossIcon'
@@ -17,12 +17,9 @@ const SearchInput = ( {getValue}) => {
 
   return (
     <div className={`${classes.headerMov}`}>
-      
       <div className={`${classes.avatar}`}>
         <img className={`${classes.logo}`} src='logo.webp' alt='logo panaderia RyM'/>
       </div>
-
-        
         <div style={{marginInline:'10px'}}>
           <div className={`${classes.searchContainer}`} >
             <SearchIcon/>
